@@ -311,8 +311,8 @@ HR-Project/
 ### Step 1: Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/HR-Project.git
-cd HR-Project
+git clone https://github.com/yourusername/Recruiter-Pro-AI.git
+cd Recruiter-Pro-AI
 ```
 
 ### Step 2: Install Dependencies
@@ -977,4 +977,3 @@ For issues and questions:
 **Status**: ✅ Production Ready  
 **Version**: 1.0.0  
 **Last Updated**: December 24, 2025  
-**Maintained By**: HR-Project Team
