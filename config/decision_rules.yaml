@@ -1,0 +1,31 @@
+# Decision Rules Configuration for Agent 4
+# Controls how Agent 3 scores are converted to hiring decisions
+
+thresholds:
+  # Confidence score thresholds for categorization
+  shortlist_min: 0.75  # High match -> SHORTLIST
+  review_min: 0.50     # Medium match -> REVIEW
+  reject_below: 0.50   # Low match -> REJECT
+
+# Overqualification detection
+overqualification_multiplier: 2.0  # Flag if experience > max_required * 2
+
+# Critical skill importance
+critical_skill_weight: 0.3  # Weight for must-have skills
+
+# Decision matrix examples:
+# Agent 3 Score | Match Label | Decision
+# -------------|-------------|----------
+# 0.85         | High        | SHORTLIST
+# 0.65         | Medium      | REVIEW
+# 0.35         | Low         | REJECT
+
+# Override rules (applied after base decision):
+# 1. Overqualified HIGH -> downgrade to REVIEW
+# 2. Underqualified (exp < min) SHORTLIST -> downgrade to REVIEW
+# 3. Critical skill gaps can prevent SHORTLIST
+
+# Explanation generation:
+# - Uses GPT-OSS-20B for natural language explanations
+# - Fallback to rule-based if API fails
+# - Includes strengths, weaknesses, and specific recommendations

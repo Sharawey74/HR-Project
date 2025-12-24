@@ -13,7 +13,8 @@
     "underqualified": 0,
     "experience_ratio": 2.0,
     "tfidf_similarity": 0.0,
-    "seniority_match": 0
+    "seniority_match": 0,
+    "bert_similarity": 0.29475998878479004
   },
   "feature_vector": [
     0.0,
@@ -27,8 +28,9 @@
     0.0,
     2.0,
     0.0,
-    0.0
+    0.0,
+    0.29475998878479004
   ],
-  "generated_at": "2025-12-09T23:30:29.560676",
+  "generated_at": "2025-12-11T02:58:37.849212",
   "generator_version": "v1.0"
 }

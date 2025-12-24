@@ -1,0 +1,75 @@
+السيرة الذاتية 9
+مهندس برمجيات - Blockchain & Web3 Developer
+م. كريم ياسر السيد
+البريد الإلكتروني: karim.elsayed@email.com | الهاتف: 20100555789+ | الموقع: القاهرة، جمهورية مصر العربية | لينكد إن: linkedin.com/in/karimelsayed | GitHub: github.com/kelsayed | Portfolio: karimcodes.eth
+الملخص المهني
+مهندس برمجيات متخصص في تقنيات Blockchain وWeb3 مع 6 سنوات من الخبرة في تطوير عقود ذكية وتطبيقات لامركزية. خبرة واسعة في Ethereum وSolidity وDeFi مع سجل مثبت في بناء حلول blockchain آمنة وقابلة للتوسع. ساهم في مشاريع بقيمة سوقية تتجاوز 200 مليون دولار ونجح في إجراء عدة عمليات Audit أمنية شاملة.
+الخبرات المهنية
+مطور Blockchain أول | شركة التقنيات اللامركزية | 2021 - حتى الآن
+•	قاد تطوير بروتوكول DeFi بقيمة سوقية تجاوزت 150 مليون دولار TVL
+•	طور عقود ذكية معقدة على Ethereum وPolygon وArbitrum باستخدام Solidity
+•	نفذ بروتوكولات Yield Farming وStaking وLiquidity Pools
+•	أجرى Code Reviews وSecurity Audits منعت ثغرات بقيمة ملايين الدولارات
+•	حسّن كفاءة Gas بنسبة 40% من خلال تحسين العقود الذكية
+•	بنى frontend متكامل باستخدام React وethers.js وWeb3.js
+•	أشرف على فريق من 4 مطوري blockchain و2 مهندسي أمان
+مطور Smart Contracts | مختبر Blockchain والعملات الرقمية | 2019 - 2021
+•	طور منصة NFT marketplace تدعم Multiple Chains
+•	بنى نظام DAO (Decentralized Autonomous Organization) للحوكمة اللامركزية
+•	نفذ عقود ERC-20 وERC-721 وERC-1155 للمشاريع المختلفة
+•	عمل على Cross-Chain Bridges للتبادل بين Blockchains مختلفة
+•	طور oracles مخصصة للحصول على بيانات خارجية موثوقة
+•	أجرى اختبارات شاملة باستخدام Hardhat وFoundry وTruffle
+مطور Full Stack & Blockchain | استوديو التطبيقات الحديثة | 2018 - 2019
+•	طور تطبيقات Web3 تدمج المحافظ الرقمية مثل MetaMask وWalletConnect
+•	بنى smart contracts لمشاريع ICO وToken Sales
+•	عمل على تطبيقات Voting Systems باستخدام Blockchain
+•	طور واجهات مستخدم لتطبيقات DApps باستخدام React وNext.js
+المؤهلات العلمية
+ماجستير في علوم الحاسب | الجامعة الأمريكية بالقاهرة | 2018
+التخصص: تقنيات Blockchain والأنظمة الموزعة | المعدل التراكمي: 3.86/4.0 الرسالة: "تحسين قابلية التوسع في شبكات Blockchain العامة"
+بكالوريوس في علوم الحاسب | جامعة القاهرة | 2016
+التخصص: هندسة البرمجيات | المعدل التراكمي: 3.81/4.0
+المهارات التقنية
+•	Blockchain Platforms: Ethereum، Polygon، Binance Smart Chain، Arbitrum، Optimism، Avalanche
+•	Smart Contracts: Solidity، Vyper، Rust (Solana)، Move (Aptos)
+•	Development Frameworks: Hardhat، Foundry، Truffle، Brownie، Anchor
+•	Web3 Libraries: ethers.js، web3.js، web3.py، wagmi، viem
+•	DeFi Protocols: Uniswap، Aave، Compound، Curve، SushiSwap، PancakeSwap
+•	Token Standards: ERC-20، ERC-721، ERC-1155، ERC-4626، ERC-2771
+•	Frontend: React، Next.js، TypeScript، Tailwind CSS، RainbowKit، ConnectKit
+•	Backend: Node.js، Express، GraphQL، The Graph Protocol، IPFS
+•	Testing: Mocha، Chai، Jest، Waffle، Forge Tests
+•	Security: Smart Contract Auditing، Slither، Mythril، Echidna، Certora
+•	Oracles: Chainlink، Band Protocol، API3
+•	Infrastructure: IPFS، Arweave، The Graph، Infura، Alchemy، QuickNode
+المشاريع البارزة
+•	بروتوكول DeFi متعدد السلاسل: منصة Yield Aggregator بـ TVL 150M+
+•	NFT Marketplace: سوق NFTs مع ميزات متقدمة للمبدعين والجامعين
+•	DAO Platform: نظام حوكمة لامركزي كامل مع التصويت والمقترحات
+•	Cross-Chain Bridge: جسر آمن لنقل الأصول بين blockchains مختلفة
+•	Staking Protocol: نظام staking متقدم مع مكافآت ديناميكية
+الشهادات المهنية
+•	Certified Blockchain Developer - Blockchain Council (2022)
+•	Ethereum Developer Bootcamp - ConsenSys Academy (2020)
+•	Smart Contract Security - OpenZeppelin (2021)
+•	DeFi Specialization - Duke University (2022)
+Security Audits المنجزة
+•	أجرى 15+ security audit شامل لعقود ذكية
+•	اكتشف ثغرات Critical في 8 مشاريع منعت خسائر محتملة
+•	عمل مع فرق Audit رائدة مثل OpenZeppelin وTrail of Bits
+المساهمات مفتوحة المصدر
+•	مساهم نشط في OpenZeppelin Contracts
+•	منشئ مكتبة Solidity مفتوحة المصدر مع 800+ نجمة على GitHub
+•	كاتب Technical Documentation لمشاريع Web3 الرائدة
+التكريمات
+•	فائز بالمركز الأول في ETHGlobal Hackathon 2023
+•	جائزة أفضل مشروع DeFi - معرض Web3 Summit 2022
+•	منحة Ethereum Foundation Grant - 50K USD (2021)
+الأنشطة المجتمعية
+•	متحدث في مؤتمرات Web3 وBlockchain في الشرق الأوسط
+•	منظم Cairo Blockchain Meetup الشهري
+•	مدرب في ورش عمل Smart Contract Development
+اللغات
+•	العربية: اللغة الأم
+•	الإنجليزية: ممتاز (IELTS: 7.5)
