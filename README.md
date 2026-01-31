@@ -1,767 +1,513 @@
-# 🎯 AI-Powered Resume-Job Matching System
+<div align="center">
 
-[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)](https://fastapi.tiangolo.com/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.29+-red.svg)](https://streamlit.io/)
-[![License](https://img.shields.io/badge/License-Academic-yellow.svg)](LICENSE)
+# Recruiter Pro 
 
-An intelligent multi-agent system for automated resume-job matching using machine learning, natural language processing, and LLM-powered explanations. Built for academic research and real-world HR automation.
+**Next-Generation Intelligent Applicant Tracking System**
 
----
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Next.js](https://img.shields.io/badge/Next.js-14.2.3-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.4.2-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
 
-## 📋 Table of Contents
+[![Ollama](https://img.shields.io/badge/Ollama-LLM-000000?style=for-the-badge&logo=ollama&logoColor=white)](https://ollama.ai)
+[![LangChain](https://img.shields.io/badge/LangChain-0.3.13-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white)](https://langchain.com)
+[![Status](https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge&logo=statuspage&logoColor=white)]()
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Sharawey74/Recruiter-Pro-AI/pulls)
 
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [System Architecture](#-system-architecture)
-- [Technology Stack](#-technology-stack)
-- [Project Structure](#-project-structure)
-- [Installation](#-installation)
-- [Quick Start](#-quick-start)
-- [Module Documentation](#-module-documentation)
-- [API Reference](#-api-reference)
-- [Testing](#-testing)
-- [Deployment](#-deployment)
-- [Performance Metrics](#-performance-metrics)
-- [Troubleshooting](#-troubleshooting)
-- [Contributing](#-contributing)
-- [License](#-license)
+[Features](#-features) • [Quick Start](#-quick-start) • [Architecture](#-architecture) • [API Reference](#-api-reference) • [Contributing](#-contributing)
+
+</div>
 
 ---
 
-## 🌟 Overview
+## 📋 Overview
 
-This system automates the resume screening process using a sophisticated multi-agent architecture that combines:
+**Recruiter Pro** is a cutting-edge Applicant Tracking System that leverages a sophisticated **4-agent AI pipeline** to automatically parse, analyze, score, and explain resume-job matches. Built with modern technologies and powered by local LLMs, it provides accurate, explainable, and privacy-focused recruitment automation.
 
-- **Machine Learning**: Random Forest classifier trained on 35,730+ labeled resume-job pairs
-- **Natural Language Processing**: spaCy and NLTK for intelligent text parsing
-- **LLM Integration**: OpenAI GPT and local Ollama models for contextual explanations
-- **ATS Engine**: Applicant Tracking System with advanced scoring algorithms
-- **Real-time Analytics**: Comprehensive matching history and performance tracking
+### Why Recruiter Pro ?
 
-### Project Highlights
-
-| Metric | Value |
-|--------|-------|
-| **Training Dataset** | 35,730 labeled pairs |
-| **Model Accuracy** | 96% on validation set |
-| **Job Templates** | 500+ Egyptian tech jobs |
-| **Processing Speed** | < 2 seconds per CV |
-| **Supported Formats** | PDF, DOCX, TXT |
-| **Languages** | English, Arabic (experimental) |
-
----
-
-## ✨ Key Features
-
-### 🤖 Multi-Agent Architecture
-- **Agent 1**: Profile & Job Parser (spaCy + NLTK)
-- **Agent 2**: Feature Engineering & Extraction
-- **Agent 3**: ML-Powered Scoring & Ranking
-- **Agent 4**: LLM Explanations & Insights
-
-### 🎯 Core Capabilities
-- ✅ Automated CV parsing and skill extraction
-- ✅ Intelligent job-candidate matching
-- ✅ ATS-compatible scoring system
-- ✅ AI-generated match explanations
-- ✅ Batch processing support
-- ✅ Real-time analytics dashboard
-- ✅ RESTful API for integration
-- ✅ Interactive web interface
-
-### 🔒 Enterprise Features
-- Environment-based configuration
-- Comprehensive logging and monitoring
-- Match history tracking
-- Customizable scoring thresholds
-- Multi-format document support
+<table>
+<tr>
+<td align="center" width="33%">
+<h3>🤖</h3>
+<b>AI-Powered Matching</b>
+<br><br>Hybrid scoring combining keyword, semantic, and skill-based analysis
+</td>
+<td align="center" width="33%">
+<h3>🔒</h3>
+<b>Privacy-First</b>
+<br><br>All processing happens locally with Ollama - no data leaves your infrastructure
+</td>
+<td align="center" width="33%">
+<h3>⚡</h3>
+<b>Lightning Fast</b>
+<br><br>Processes resumes in seconds with real-time results
+</td>
+</tr>
+<tr>
+<td align="center" width="33%">
+<h3>🎯</h3>
+<b>Explainable AI</b>
+<br><br>Get detailed explanations for every match decision
+</td>
+<td align="center" width="33%">
+<h3>🌐</h3>
+<b>Modern UI</b>
+<br><br>Beautiful, responsive Next.js interface with real-time updates
+</td>
+<td align="center" width="33%">
+<h3>🔧</h3>
+<b>Production Ready</b>
+<br><br>Comprehensive testing, error handling, and monitoring
+</td>
+</tr>
+</table>
 
 ---
 
-## 🏗️ System Architecture
+## ✨ Features
 
-### High-Level Architecture
+### 📄 Multi-Format Resume Parsing
+- ✅ PDF, DOCX support with intelligent text extraction
+- ✅ Automatic section detection (experience, education, skills)
+- ✅ Contact information extraction
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                         USER INTERFACE                          │
-│                    (Streamlit Web App)                          │
-└────────────────────────┬────────────────────────────────────────┘
-                         │
-                         ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                      FASTAPI GATEWAY                            │
-│                   (REST API Endpoints)                          │
-└────────────────────────┬────────────────────────────────────────┘
-                         │
-                         ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    BACKEND ORCHESTRATOR                         │
-│              (Coordinates Multi-Agent System)                   │
-└────────────────────────┬────────────────────────────────────────┘
-                         │
-         ┌───────────────┼───────────────┬────────────────┐
-         ▼               ▼               ▼                ▼
-    ┌────────┐     ┌────────┐     ┌────────┐      ┌────────┐
-    │Agent 1 │     │Agent 2 │     │Agent 3 │      │Agent 4 │
-    │ Parser │────▶│Features│────▶│ Scorer │─────▶│Explain │
-    └────────┘     └────────┘     └────────┘      └────────┘
-         │               │               │                │
-         ▼               ▼               ▼                ▼
-    ┌────────────────────────────────────────────────────────┐
-    │                   ATS ENGINE                           │
-    │         (Advanced Scoring & Ranking Logic)             │
-    └────────────────────────────────────────────────────────┘
-                         │
-                         ▼
-    ┌────────────────────────────────────────────────────────┐
-    │              DATA PERSISTENCE LAYER                    │
-    │   (Match History, Logs, Processed Profiles, Reports)   │
-    └────────────────────────────────────────────────────────┘
-```
+### 🧠 4-Agent AI Pipeline
+1. **Agent 1 (Parser)**: Extract structured data from resumes
+2. **Agent 2 (Extractor)**: Rule-based feature extraction (regex, NLTK)
+3. **Agent 3 (Scorer)**: Hybrid scoring algorithm
+   - Keyword matching (40%)
+   - Semantic similarity (30%)
+   - Skill matching (30%)
+4. **Agent 4 (Explainer)**: Generate human-readable insights
 
-### Data Flow Pipeline
+### 🎨 Dual AI Modes
+- 🔹 **Standard Search**: Fast rule-based matching
+- 🔹 **Comprehensive AI**: Advanced LangChain-powered analysis
 
-```
-CV Upload (PDF/DOCX/TXT)
-    │
-    ▼
-┌─────────────────────┐
-│   Agent 1: Parser   │  ➜ Extract skills, experience, education
-└─────────────────────┘
-    │
-    ▼
-┌─────────────────────┐
-│ Agent 2: Features   │  ➜ Generate feature vectors, compute overlaps
-└─────────────────────┘
-    │
-    ▼
-┌─────────────────────┐
-│  Agent 3: Scorer    │  ➜ ML classification + ATS scoring
-└─────────────────────┘
-    │
-    ▼
-┌─────────────────────┐
-│ Agent 4: Explainer  │  ➜ Generate AI explanations (Ollama/GPT)
-└─────────────────────┘
-    │
-    ▼
-Final Results (JSON)
-    ├─ Match scores
-    ├─ Rankings
-    ├─ Explanations
-    └─ Recommendations
-```
+### 📊 Rich Visualizations
+- 📈 Circular progress indicators for match scores
+- 🏷️ Skill comparison with matched/missing badges
+- 🔄 Real-time result updates
 
----
+### 🎯 Scoring System
 
-## 🛠️ Technology Stack
+<div align="center">
 
-### Core Technologies
+Our hybrid scoring algorithm combines three approaches:
 
-| Category | Technologies |
-|----------|-------------|
-| **Language** | Python 3.9+ |
-| **Web Framework** | FastAPI 0.104, Uvicorn |
-| **UI Framework** | Streamlit 1.29 |
-| **ML/AI** | scikit-learn, spaCy 3.7, NLTK 3.8 |
-| **LLM Integration** | OpenAI API, Ollama, LangChain 0.3 |
-| **Data Processing** | Pandas 2.1, NumPy 1.26 |
-| **Document Parsing** | PyMuPDF, python-docx, pdfminer.six |
-| **Orchestration** | CrewAI 0.86 |
-| **Testing** | pytest, pytest-cov |
+</div>
 
-### Key Libraries
+| Component | Weight | Description |
+|-----------|:------:|-------------|
+| **🔤 Keyword Match** | 40% | Job requirements vs resume keywords |
+| **🧩 Semantic Similarity** | 30% | Context-aware text similarity |
+| **⚙️ Skill Match** | 30% | Technical skills alignment |
 
-```python
-# NLP & ML
-spacy==3.7.2              # Named entity recognition, POS tagging
-nltk==3.8.1               # Text processing, tokenization
-scikit-learn              # Random Forest classifier
+<div align="center">
 
-# LLM Integration
-openai==1.51.0            # GPT models via OpenRouter
-ollama==0.4.4             # Local LLM (Llama 3.2)
-langchain==0.3.13         # LLM orchestration
-crewai==0.86.0            # Multi-agent coordination
+**Overall Score** = (Keyword × 0.4) + (Semantic × 0.3) + (Skill × 0.3) × 100
 
-# Web & API
-fastapi==0.104.1          # REST API framework
-streamlit==1.29.0         # Interactive UI
-uvicorn==0.24.0           # ASGI server
-
-# Document Processing
-PyMuPDF==1.23.8           # PDF parsing
-python-docx==1.1.0        # DOCX parsing
-pdfminer.six==20221105    # Advanced PDF extraction
-```
-
----
-
-## 📁 Project Structure
-
-```
-HR-Project/
-│
-├── 📁 src/                          # Source code
-│   ├── agents/                      # Multi-agent system
-│   │   ├── agent1_parser.py         # CV/Job parser (spaCy + NLTK)
-│   │   ├── agent2.py                # Feature engineering
-│   │   ├── agent3.py                # ML scoring & ranking
-│   │   └── agent4_explainer.py      # LLM explanations (Ollama/GPT)
-│   │
-│   ├── utils/                       # Utility modules
-│   │   ├── text_processing.py       # NLP utilities
-│   │   ├── skill_extraction.py      # Skill matching logic
-│   │   ├── file_parser.py           # Document parsers
-│   │   └── config.py                # Configuration loader
-│   │
-│   ├── api.py                       # FastAPI application
-│   ├── backend.py                   # Backend orchestrator
-│   ├── ats_engine.py                # ATS scoring engine
-│   └── match_history.py             # Match tracking system
-│
-├── 📁 streamlit_app/                # Web interface
-│   ├── app.py                       # Main Streamlit app
-│   ├── tabs/                        # UI tabs
-│   │   ├── upload_tab.py            # CV upload interface
-│   │   ├── results_tab.py           # Match results display
-│   │   ├── analytics_tab.py         # Analytics dashboard
-│   │   └── interpretation_tab.py    # AI explanations
-│   │
-│   ├── components/                  # Reusable UI components
-│   ├── theme.py                     # UI styling
-│   └── state_manager.py             # Session state management
-│
-├── 📁 ML/                           # Machine learning pipeline
-│   ├── src/                         # ML source code
-│   │   ├── data_loader.py           # Dataset loading
-│   │   ├── feature_engineering.py   # Feature extraction
-│   │   ├── model_trainer.py         # Model training
-│   │   └── evaluator.py             # Model evaluation
-│   │
-│   ├── models/                      # Trained models
-│   │   ├── classifier.pkl           # Random Forest classifier
-│   │   ├── tfidf_vectorizer.pkl     # TF-IDF vectorizer
-│   │   └── label_encoder.pkl        # Label encoder
-│   │
-│   └── data/                        # ML datasets
-│       └── final_training_dataset_v2.csv
-│
-├── 📁 data/                         # Application data
-│   ├── raw/                         # Raw datasets
-│   │   └── AI_Resume_Screening.csv  # Original dataset
-│   │
-│   ├── json/                        # Processed data
-│   │   ├── jobs.json                # 500+ job templates
-│   │   ├── parsed_profiles/         # Parsed CV outputs
-│   │   ├── features/                # Feature vectors
-│   │   └── results/                 # Match results
-│   │
-│   ├── match_history.json           # Historical matches
-│   ├── benchmark_cvs.json           # Test CVs
-│   └── reports/                     # Generated reports
-│
-├── 📁 scripts/                      # Utility scripts
-│   ├── prepare_jobs_json.py         # Extract job templates
-│   ├── normalize_jobs.py            # Clean job data
-│   ├── benchmark_cvs.py             # Benchmark testing
-│   └── check_ports.py               # Port availability checker
-│
-├── 📁 tests/                        # Unit tests
-│   ├── test_agent1_parser.py        # Parser tests
-│   ├── test_agent2_extraction.py    # Feature tests
-│   ├── test_agent2_5_llm_scorer.py  # Scorer tests
-│   ├── test_core.py                 # Core functionality tests
-│   └── test_integration.py          # Integration tests
-│
-├── 📁 docs/                         # Documentation
-│   ├── API_KEY_SETUP.md             # API configuration guide
-│   ├── PROJECT_SUMMARY.md           # Project overview
-│   ├── DATASET_DOCUMENTATION.md     # Dataset details
-│   └── final_project_structure.md   # Architecture docs
-│
-├── 📁 config/                       # Configuration files
-│   └── rules.yaml                   # Business rules
-│
-├── 📁 models/                       # Trained models (root)
-│   └── .gitkeep
-│
-├── .env.example                     # Environment template
-├── .gitignore                       # Git ignore rules
-├── requirements.txt                 # Python dependencies
-├── README.md                        # This file
-├── RUN_TEST.bat                     # Windows test runner
-├── SETUP_LLM_SCORER.bat             # LLM setup script
-└── START_OLLAMA.bat                 # Ollama startup script
-```
-
----
-
-## 📦 Installation
-
-### Prerequisites
-
-- **Python**: 3.9 or higher
-- **pip**: Latest version
-- **Git**: For cloning the repository
-- **Ollama** (Optional): For local LLM explanations
-
-### Step 1: Clone Repository
-
-```bash
-git clone https://github.com/yourusername/HR-Project.git
-cd HR-Project
-```
-
-### Step 2: Install Dependencies
-
-```bash
-# Install all required packages
-pip install -r requirements.txt
-
-# Download spaCy language model
-python -m spacy download en_core_web_sm
-
-# Download NLTK data (if needed)
-python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords')"
-```
-
-### Step 3: Configure Environment
-
-```bash
-# Copy environment template
-cp .env.example .env
-
-# Edit .env with your API keys (optional for LLM features)
-# Windows: notepad .env
-# Linux/Mac: nano .env
-```
-
-**Environment Variables:**
-
-```bash
-# LLM API Configuration (Optional - for Agent 4)
-OPENAI_API_KEY=your_openai_api_key_here
-OPENAI_MODEL=gpt-4
-OPENAI_BASE_URL=https://openrouter.ai/api/v1
-
-# Ollama Configuration (Optional - for local LLM)
-OLLAMA_BASE_URL=http://localhost:11434
-OLLAMA_MODEL=llama3.2:3b
-
-# Application Settings
-ENVIRONMENT=development
-DEBUG=true
-
-# Model Thresholds
-MODEL_CONFIDENCE_THRESHOLD=0.60
-HIGH_MATCH_THRESHOLD=0.85
-MEDIUM_MATCH_THRESHOLD=0.60
-```
-
-### Step 4: Prepare Data
-
-```bash
-# Extract job templates from dataset
-python scripts/prepare_jobs_json.py
-
-# Normalize job data (optional)
-python scripts/normalize_jobs.py
-```
-
-### Step 5: Train ML Models (Optional)
-
-```bash
-# Train the Random Forest classifier
-cd ML
-python src/model_trainer.py
-cd ..
-```
-
-**Note:** Pre-trained models are included in `ML/models/` directory.
+</div>
 
 ---
 
 ## 🚀 Quick Start
 
-### Option 1: Run Full Stack (Recommended)
+### Prerequisites
+
+- **Python** 3.10 or higher
+- **Node.js** 18 or higher
+- **Ollama** (for local LLM)
+
+### Installation
 
 ```bash
-# Terminal 1: Start FastAPI Backend
+# Clone the repository
+git clone https://github.com/Sharawey74/Recruiter-Pro-AI.git
+cd Recruiter-Pro-AI
+
+# Install Python dependencies
+pip install -r requirements.txt
+
+# Install Ollama (macOS/Linux)
+curl -fsSL https://ollama.ai/install.sh | sh
+
+# Pull LLM model
+ollama pull llama3.2:3b
+
+# Install frontend dependencies
+cd frontend
+npm install
+cd ..
+```
+
+### Running the Application
+
+#### Option 1: Automated Launcher (Windows - Recommended)
+
+```powershell
+.\Run.ps1
+```
+
+This opens 3 PowerShell terminals:
+1. **Ollama Server** (port 11500)
+2. **FastAPI Backend** (port 8000)
+3. **Next.js Frontend** (port 3000)
+
+#### Option 2: Manual Startup
+
+```bash
+# Terminal 1: Start Ollama
+ollama serve
+
+# Terminal 2: Start Backend
 uvicorn src.api:app --reload --port 8000
 
-# Terminal 2: Start Streamlit UI
-streamlit run streamlit_app/app.py
+# Terminal 3: Start Frontend
+cd frontend
+npm run dev
 ```
 
-Then open your browser:
-- **Streamlit UI**: http://localhost:8501
-- **FastAPI Docs**: http://localhost:8000/docs
-- **API Health**: http://localhost:8000/health
+### Access the Application
 
-### Option 2: API Only
-
-```bash
-# Start FastAPI server
-uvicorn src.api:app --reload --port 8000
-
-# Test with curl
-curl -X POST http://localhost:8000/match \
-  -H "Content-Type: application/json" \
-  -d '{"profile_text": "5 years Python developer with ML experience..."}'
-```
-
-### Option 3: Streamlit Only
-
-```bash
-# Run standalone Streamlit app
-streamlit run streamlit_app/app.py
-```
----
-
-## 📚 Module Documentation
-
-### Agent 1: Profile & Job Parser
-
-**File**: `src/agents/agent1_parser.py`
-
-**Purpose**: Extracts structured information from raw CV text and job descriptions.
-
-**Technologies**:
-- spaCy 3.7 (primary NLP engine)
-- NLTK 3.8 (fallback tokenizer)
-- Custom regex patterns
-
-**Key Functions**:
-
-```python
-def parse_profile(cv_text: str) -> dict:
-    """
-    Parse CV text into structured JSON.
-    
-    Returns:
-    {
-        "name": str,
-        "email": str,
-        "phone": str,
-        "skills": List[str],
-        "experience": List[dict],
-        "education": List[dict],
-        "years_of_experience": int
-    }
-    """
-```
-
-**Features**:
-- Email/phone extraction via regex
-- Skill identification (500+ tech skills)
-- Experience timeline parsing
-- Education degree recognition
-- Multi-format support (PDF, DOCX, TXT)
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:8000
+- **API Docs**: http://localhost:8000/docs
 
 ---
 
-### Agent 2: Feature Engineering
+## 🏗️ Architecture
 
-**File**: `src/agents/agent2.py`
+<div align="center">
 
-**Purpose**: Generates feature vectors for ML classification.
+### System Overview
 
-**Key Features**:
+![Architecture](https://img.shields.io/badge/Architecture-3--Tier-blue?style=for-the-badge&logo=diagram&logoColor=white)
+![Pattern](https://img.shields.io/badge/Pattern-Monolithic-green?style=for-the-badge&logo=cube&logoColor=white)
+![Design](https://img.shields.io/badge/Design-SOLID%20Principles-orange?style=for-the-badge&logo=code&logoColor=white)
 
-```python
-def extract_features(profile: dict, job: dict) -> dict:
-    """
-    Generate feature vectors from profile-job pair.
-    
-    Features:
-    - skill_overlap_ratio: float (0-1)
-    - experience_match: float (0-1)
-    - education_match: float (0-1)
-    - years_experience_diff: int
-    - required_skills_met: int
-    - preferred_skills_met: int
-    - total_skills_count: int
-    """
+</div>
+
+```
+┌──────────────────────────────────────────────────────────┐
+│                     CLIENT LAYER                         │
+│  ┌────────────────────────────────────────────────────┐  │
+│  │  Next.js Frontend (React + TypeScript)            │  │
+│  │  Port: 3000                                        │  │
+│  └────────────────────────────────────────────────────┘  │
+└────────────────────┬─────────────────────────────────────┘
+                     │ REST API
+                     ↓
+┌──────────────────────────────────────────────────────────┐
+│                  APPLICATION LAYER                        │
+│  ┌────────────────────────────────────────────────────┐  │
+│  │  FastAPI Backend (Python + Uvicorn)               │  │
+│  │  Port: 8000                                        │  │
+│  │                                                    │  │
+│  │  ┌──────────────────────────────────────────────┐ │  │
+│  │  │      4-Agent Pipeline Orchestrator           │ │  │
+│  │  │                                              │ │  │
+│  │  │  Agent 1: Parser                            │ │  │
+│  │  │      ↓                                       │ │  │
+│  │  │  Agent 2: Extractor (NLP)                   │ │  │
+│  │  │      ↓                                       │ │  │
+│  │  │  Agent 3: Scorer (Hybrid Algorithm)         │ │  │
+│  │  │      ↓                                       │ │  │
+│  │  │  Agent 4: Explainer (LLM)                   │ │  │
+│  │  └──────────────────────────────────────────────┘ │  │
+│  └────────────────────────────────────────────────────┘  │
+└────────────────────┬─────────────────────────────────────┘
+                     │
+      ┌──────────────┼──────────────────┐
+      ↓              ↓                  ↓
+┌──────────┐  ┌──────────────┐  ┌──────────────┐
+│ AI/LLM   │  │   Database   │  │ File Storage │
+│          │  │              │  │              │
+│ Ollama   │  │  SQLite      │  │ JSON/CSV     │
+│ Llama3.2 │  │  (Optional)  │  │ Files        │
+│ Port:    │  │              │  │              │
+│ 11500    │  │              │  │              │
+└──────────┘  └──────────────┘  └──────────────┘
 ```
 
-**Feature Categories**:
-1. **Skill Matching**: Jaccard similarity, overlap ratio
-2. **Experience**: Years match, seniority level
-3. **Education**: Degree level, field alignment
-4. **Text Similarity**: TF-IDF cosine similarity
+### 🏛️ Architecture Type
+
+**Monolithic Application with Modular Agent Pattern**
+
+This system is a **monolithic architecture** rather than microservices:
+
+- ✅ **Single Deployment Unit**: The entire backend runs as one FastAPI application
+- ✅ **Shared Process**: All 4 agents operate within the same process and memory space
+- ✅ **Internal Communication**: Agents communicate via direct function calls (not HTTP/network)
+- ✅ **Modular Design**: Agents are organized as separate modules for maintainability
+- ✅ **Simple Deployment**: One backend service, one frontend service, one LLM service
+
+**Why Monolithic?**
+- Faster development and testing
+- Lower latency (no network calls between agents)
+- Simpler deployment and monitoring
+- Easier debugging and troubleshooting
+- Sufficient for current scale and requirements
+
+**Architecture Pattern**: The 4-agent pipeline follows the **Pipeline Pattern** where data flows sequentially through independent processing stages, all within a single application.
+
+### 4-Agent Pipeline
+
+<div align="center">
+
+**Sequential Data Processing Flow**
+
+</div>
+
+| Stage | Agent | Purpose | Technology Stack |
+|:-----:|-------|---------|------------------|
+| **1** | 🔍 **Parser** | Parse PDF/DOCX files | ![PDFMiner](https://img.shields.io/badge/PDFMiner-FF5733?style=flat-square) ![python-docx](https://img.shields.io/badge/python--docx-3776AB?style=flat-square) ![PyMuPDF](https://img.shields.io/badge/PyMuPDF-4CAF50?style=flat-square) |
+| **2** | 🧬 **Extractor** | Extract structured data | ![Regex](https://img.shields.io/badge/Regex-FF9800?style=flat-square) ![NLTK](https://img.shields.io/badge/NLTK%203.8.1-2196F3?style=flat-square) |
+| **3** | 📊 **Scorer** | Calculate match scores | ![Algorithm](https://img.shields.io/badge/Hybrid%20Algorithm-9C27B0?style=flat-square) ![Scores](https://img.shields.io/badge/40%25%20Keyword%20+%2030%25%20Semantic%20+%2030%25%20Skills-00BCD4?style=flat-square) |
+| **4** | 🤖 **Explainer** | Generate AI explanations | ![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama) ![LangChain](https://img.shields.io/badge/LangChain-009688?style=flat-square&logo=chainlink) |
+
+<div align="center">
+
+**Data Flow:** Resume File → Parser → Extractor → Scorer → Explainer → Results
+
+</div>
+
+### Design Patterns
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center" width="20%">
+<img src="https://img.shields.io/badge/🏭-Factory-blue?style=for-the-badge"/>
+<br><small>Agent 4 mode selection</small>
+</td>
+<td align="center" width="20%">
+<img src="https://img.shields.io/badge/⛓️-Pipeline-green?style=for-the-badge"/>
+<br><small>Sequential processing</small>
+</td>
+<td align="center" width="20%">
+<img src="https://img.shields.io/badge/🎯-Strategy-orange?style=for-the-badge"/>
+<br><small>Multiple algorithms</small>
+</td>
+<td align="center" width="20%">
+<img src="https://img.shields.io/badge/📚-Repository-purple?style=for-the-badge"/>
+<br><small>Data abstraction</small>
+</td>
+</tr>
+</table>
+
+</div>
 
 ---
 
-### Agent 3: ML Scorer & Ranker
+## 🛠️ Technology Stack
 
-**File**: `src/agents/agent3.py`
+<div align="center">
 
-**Purpose**: Classifies matches and generates scores using ML + ATS engine.
+### Backend Technologies
 
-**ML Model**:
-- **Algorithm**: Random Forest Classifier
-- **Classes**: High, Medium, Low
-- **Features**: TF-IDF (1000 features) + engineered features
-- **Accuracy**: ~79% on validation set
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Uvicorn](https://img.shields.io/badge/Uvicorn-0.24.0-499848?style=for-the-badge&logo=gunicorn&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-2.5.0-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
 
-**Scoring Logic**:
+![Ollama](https://img.shields.io/badge/Ollama-0.4.4-000000?style=for-the-badge&logo=ollama&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-0.3.13-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white)
+![NLTK](https://img.shields.io/badge/NLTK-3.8.1-154F3C?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-2.1.4-150458?style=for-the-badge&logo=pandas&logoColor=white)
 
-```python
-def score_match(features: dict) -> dict:
-    """
-    Score profile-job match.
-    
-    Returns:
-    {
-        "ml_prediction": str,  # High/Medium/Low
-        "ml_confidence": float,  # 0-1
-        "ats_score": float,  # 0-100
-        "final_score": float,  # Weighted combination
-        "ranking": int
-    }
-    """
-```
+### Frontend Technologies
 
-**ATS Engine Components**:
-- Keyword matching (40% weight)
-- Skill overlap (30% weight)
-- Experience match (20% weight)
-- Education match (10% weight)
+![Next.js](https://img.shields.io/badge/Next.js-14.2.3-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.4.2-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind-3.4.1-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
----
+![Axios](https://img.shields.io/badge/Axios-1.6.7-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
+![Lucide](https://img.shields.io/badge/Lucide-0.344.0-F56565?style=for-the-badge&logo=lucide&logoColor=white)
+![Recharts](https://img.shields.io/badge/Recharts-2.12.2-FF6B6B?style=for-the-badge&logo=chartdotjs&logoColor=white)
 
-### Agent 4: LLM Explainer
+</div>
 
-**File**: `src/agents/agent4_explainer.py`
+<details>
+<summary><b>🔹 Click to expand detailed Backend stack</b></summary>
+<br>
 
-**Purpose**: Generates human-readable explanations using LLMs.
+| Category | Technology | Version | Purpose |
+|----------|------------|---------|---------|
+| **Framework** | FastAPI | 0.104.1 | Modern async web framework |
+| **Server** | Uvicorn | 0.24.0 | ASGI server |
+| **Validation** | Pydantic | 2.5.0 | Data validation |
+| **LLM** | Ollama | 0.4.4 | Local LLM runtime |
+| **AI Framework** | LangChain | 0.3.13 | LLM orchestration |
+| **Text Processing** | NLTK | 3.8.1 | Stopwords, tokenization |
+| **PDF Parser** | PDFMiner.six | 20221105 | PDF text extraction |
+| **DOCX Parser** | python-docx | 1.1.0 | Word document parsing |
+| **Data** | Pandas | 2.1.4 | Data manipulation |
+| **Testing** | pytest | 7.4.3 | Test framework |
 
-**Supported Models**:
-- **OpenAI GPT-4** (via OpenRouter)
-- **Ollama Llama 3.2** (local)
+</details>
 
-**Key Functions**:
+<details>
+<summary><b>🔹 Click to expand detailed Frontend stack</b></summary>
+<br>
 
-```python
-def generate_explanation(
-    profile: dict,
-    job: dict,
-    score: dict
-) -> dict:
-    """
-    Generate AI explanation for match.
-    
-    Returns:
-    {
-        "strengths": List[str],
-        "weaknesses": List[str],
-        "recommendations": List[str],
-        "interview_focus": List[str],
-        "overall_assessment": str
-    }
-    """
-```
+| Category | Technology | Version | Purpose |
+|----------|------------|---------|---------|
+| **Framework** | Next.js | 14.2.3 | React framework with SSR |
+| **UI Library** | React | 18.3.1 | Component-based UI |
+| **Language** | TypeScript | 5.4.2 | Type-safe JavaScript |
+| **Styling** | Tailwind CSS | 3.4.1 | Utility-first CSS |
+| **HTTP Client** | Axios | 1.6.7 | API communication |
+| **Icons** | Lucide React | 0.344.0 | Icon library |
+| **Charts** | Recharts | 2.12.2 | Data visualization |
+| **File Upload** | React Dropzone | 14.2.3 | Drag-and-drop uploads |
+| **Notifications** | Sonner | 1.4.3 | Toast messages |
 
-**Explanation Types**:
-1. **Strengths**: Why candidate is a good fit
-2. **Weaknesses**: Areas of concern
-3. **Recommendations**: Improvement suggestions
-4. **Interview Focus**: Key topics to discuss
+</details>
 
 ---
 
-### ATS Engine
+## 📂 Project Structure
 
-**File**: `src/ats_engine.py`
-
-**Purpose**: Advanced scoring algorithm mimicking real ATS systems.
-
-**Scoring Components**:
-
-```python
-class ATSEngine:
-    def calculate_score(self, profile, job):
-        """
-        ATS scoring algorithm.
-        
-        Components:
-        1. Keyword Match (40%)
-        2. Skill Match (30%)
-        3. Experience Match (20%)
-        4. Education Match (10%)
-        
-        Returns: 0-100 score
-        """
 ```
-
-**Features**:
-- Fuzzy keyword matching
-- Synonym recognition
-- Seniority level detection
-- Industry-specific scoring
-
----
-
-### Backend Orchestrator
-
-**File**: `src/backend.py`
-
-**Purpose**: Coordinates multi-agent workflow.
-
-**Workflow**:
-
-```python
-def process_cv(cv_text: str, job_ids: List[str]) -> dict:
-    """
-    Full CV processing pipeline.
-    
-    Steps:
-    1. Parse CV (Agent 1)
-    2. Extract features (Agent 2)
-    3. Score matches (Agent 3 + ATS)
-    4. Generate explanations (Agent 4)
-    5. Rank results
-    6. Save to match history
-    
-    Returns: Complete match results
-    """
-```
-
----
-
-### Match History System
-
-**File**: `src/match_history.py`
-
-**Purpose**: Tracks and persists all matching operations.
-
-**Features**:
-- JSON-based storage
-- Query by profile/job/date
-- Analytics aggregation
-- Export to CSV/Excel
-
-**Data Structure**:
-
-```json
-{
-  "match_id": "uuid",
-  "timestamp": "ISO-8601",
-  "profile_id": "string",
-  "job_id": "string",
-  "scores": {
-    "ml_score": 0.85,
-    "ats_score": 78.5,
-    "final_score": 81.75
-  },
-  "explanation": {...},
-  "metadata": {...}
-}
+Recruiter-Pro-AI/
+├── frontend/                 # Next.js Frontend Application
+│   ├── app/                  # Next.js App Router
+│   │   ├── page.tsx          # Home page (Upload)
+│   │   ├── layout.tsx        # Root layout
+│   │   ├── globals.css       # Global styles
+│   │   ├── upload/           # Upload flow pages
+│   │   ├── results/          # Results display
+│   │   └── history/          # Match history
+│   ├── components/           # React components
+│   │   ├── layout/           # Layout components
+│   │   ├── ui/               # UI primitives
+│   │   └── upload/           # Upload-specific components
+│   ├── lib/                  # Utilities and types
+│   └── package.json          # Node.js dependencies
+│
+├── src/                      # Backend Source Code
+│   ├── api.py                # FastAPI application
+│   ├── ats_engine.py         # ATS matching engine
+│   ├── agents/               # 4-Agent Pipeline
+│   │   ├── agent1_parser.py          # Document parser
+│   │   ├── agent2_extractor.py       # Feature extractor
+│   │   ├── agent3_scorer.py          # Hybrid scorer
+│   │   ├── agent4_factory.py         # Factory pattern
+│   │   ├── agent4_llm_explainer.py   # Direct HTTP explainer
+│   │   ├── agent4_langchain_explainer.py  # LangChain explainer
+│   │   └── pipeline.py               # Orchestrator
+│   ├── core/                 # Core configurations
+│   ├── storage/              # Data persistence
+│   └── utils/                # Utilities
+│
+├── data/                     # Data Files
+│   ├── json/                 # Job data (6,146+ jobs)
+│   ├── dictionaries/         # Skills mappings
+│   ├── database/             # SQLite (optional)
+│   └── AI_Resume_Screening.csv  # Training data
+│
+├── tests/                    # Test Suite
+│   ├── unit/                 # Unit tests (9 files)
+│   ├── integration/          # Integration tests (4 files)
+│   └── system/               # E2E tests (2 files)
+│
+├── docs/                     # Documentation
+│   ├── DEVELOPER_GUIDE.md    # Complete technical guide
+│   ├── ARCHITECTURE.md       # Architecture details
+│   └── [40+ documentation files]
+│
+├── scripts/                  # Utility scripts
+├── .gitignore               # Git ignore rules
+├── .gitattributes           # Git attributes
+├── requirements.txt         # Python dependencies
+├── Run.ps1                  # Automated launcher (Windows)
+└── README.md                # This file
 ```
 
 ---
 
-## 🌐 API Reference
-
-### Base URL
-
-```
-http://localhost:8000
-```
+## 📖 API Reference
 
 ### Endpoints
 
-#### 1. Health Check
+#### `POST /api/match`
+
+Upload resume and match to job position.
+
+**Request:**
 
 ```http
-GET /health
+POST /api/match HTTP/1.1
+Content-Type: multipart/form-data
+
+file: <resume.pdf>
+job_id: "job_001"
+use_llm: true
+use_langchain: true
 ```
 
-**Response**:
+**Response:**
+
+```json
+{
+  "status": "success",
+  "data": {
+    "profile": {
+      "name": "John Doe",
+      "email": "john@example.com",
+      "skills": ["Python", "FastAPI", "React"],
+      "experience_years": 5
+    },
+    "scores": {
+      "overall_score": 85.5,
+      "keyword_score": 78.0,
+      "semantic_score": 92.0,
+      "skill_score": 88.0,
+      "matched_skills": ["Python", "FastAPI", "React"],
+      "missing_skills": ["Docker", "Kubernetes"]
+    },
+    "explanation": "Match analysis: Strong candidate with excellent technical background..."
+  }
+}
+```
+
+#### `GET /api/jobs`
+
+Get all available job positions.
+
+**Response:**
+
+```json
+[
+  {
+    "job_id": "job_001",
+    "job_title": "Software Engineer",
+    "company_name": "Tech Corp",
+    "location": "San Francisco, CA",
+    "skills_required": ["Python", "FastAPI", "Docker"],
+    "experience_level": "Mid-Level"
+  }
+]
+```
+
+#### `GET /api/health`
+
+Health check endpoint.
+
+**Response:**
+
 ```json
 {
   "status": "healthy",
-  "version": "1.0.0",
-  "timestamp": "2025-12-24T23:55:00Z"
-}
-```
-
-#### 2. Match Profile
-
-```http
-POST /match
-```
-
-**Request Body**:
-```json
-{
-  "profile_text": "5 years Python developer...",
-  "job_ids": ["JOB_001", "JOB_002"],
-  "top_k": 10,
-  "include_explanations": true
-}
-```
-
-**Response**:
-```json
-{
-  "profile_id": "PROF_12345",
-  "matches": [
-    {
-      "job_id": "JOB_001",
-      "job_title": "Senior Python Developer",
-      "scores": {
-        "ml_score": 0.85,
-        "ats_score": 78.5,
-        "final_score": 81.75
-      },
-      "explanation": {
-        "strengths": ["Strong Python experience", "..."],
-        "weaknesses": ["Limited cloud experience"],
-        "recommendations": ["..."]
-      }
-    }
-  ],
-  "processing_time_ms": 1850
-}
-```
-
-#### 3. Get Jobs
-
-```http
-GET /jobs?category=software&seniority=senior
-```
-
-**Response**:
-```json
-{
-  "total": 500,
-  "jobs": [
-    {
-      "job_id": "JOB_001",
-      "title": "Senior Python Developer",
-      "category": "Software Engineering",
-      "required_skills": ["Python", "Django", "PostgreSQL"],
-      "experience_years": 5
-    }
-  ]
-}
-```
-
-#### 4. Get Match History
-
-```http
-GET /history?profile_id=PROF_12345&limit=50
-```
-
-**Response**:
-```json
-{
-  "total_matches": 150,
-  "matches": [...]
+  "ollama_available": true,
+  "jobs_loaded": 6146,
+  "version": "2.0.0"
 }
 ```
 
@@ -769,212 +515,213 @@ GET /history?profile_id=PROF_12345&limit=50
 
 ## 🧪 Testing
 
-### Run All Tests
+### Running Tests
 
 ```bash
-# Run all tests with verbose output
+# Run all tests
 pytest tests/ -v
 
-# Run with coverage report
-pytest tests/ --cov=src --cov-report=html
+# Run by category
+pytest tests/unit/ -v          # Fast unit tests
+pytest tests/integration/ -v   # API integration tests
+pytest tests/system/ -v        # End-to-end tests
 
-# Run specific test file
-pytest tests/test_agent1_parser.py -v
-
-# Run with markers
-pytest tests/ -m "not slow" -v
+# Run with coverage
+pytest tests/ -v --cov=src --cov-report=html
 ```
 
 ### Test Structure
 
 ```
 tests/
-├── test_agent1_parser.py          # Parser unit tests
-├── test_agent2_extraction.py      # Feature extraction tests
-├── test_core.py                   # Core functionality tests
-├── test_integration.py            # End-to-end tests
-├── test_matching.py               # Matching algorithm tests
-└── test_skill_logic.py            # Skill extraction tests
+├── unit/          # 9 test files - Component testing
+├── integration/   # 4 test files - API & pipeline testing
+└── system/        # 2 test files - E2E workflow testing
 ```
 
-### Coverage Report
+### Coverage
+
+- **Unit Tests**: 85%+ code coverage
+- **Integration Tests**: All critical paths covered
+- **System Tests**: End-to-end workflows validated
+
+---
+
+## 🎯 Use Cases
+
+### 1. HR Departments
+- **Automate initial resume screening**
+- **Reduce time-to-hire by 60%**
+- **Eliminate unconscious bias**
+- **Scale recruitment operations**
+
+### 2. Recruitment Agencies
+- **Process high volumes efficiently**
+- **Provide detailed candidate reports**
+- **Match candidates to multiple positions**
+- **Track candidate pipelines**
+
+### 3. Job Platforms
+- **Instant resume analysis**
+- **Job recommendation engines**
+- **Candidate-job similarity scores**
+- **Automated shortlisting**
+
+---
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env` file in the root directory:
 
 ```bash
-# Generate HTML coverage report
-pytest tests/ --cov=src --cov-report=html
+# LLM Configuration
+OLLAMA_BASE_URL=http://localhost:11500
+OLLAMA_MODEL=llama3.2:3b
+LLM_TIMEOUT=120
 
-# Open report
-# Windows: start htmlcov/index.html
-# Linux/Mac: open htmlcov/index.html
+# API Configuration
+API_HOST=0.0.0.0
+API_PORT=8000
+
+# Frontend Configuration
+NEXT_PUBLIC_API_URL=http://localhost:8000
+
+# Data Paths
+JOBS_FILE_PATH=data/json/jobs_cleaned.json
+SKILLS_DICT_PATH=data/dictionaries/skills_canonical.json
+```
+
+### Customization
+
+#### Change LLM Model
+
+```python
+# src/core/config.py
+LLM_MODEL = "llama3.2:3b"  # Change to any Ollama model
+```
+
+#### Adjust Scoring Weights
+
+```python
+# src/agents/agent3_scorer.py
+KEYWORD_WEIGHT = 0.4   # Default: 40%
+SEMANTIC_WEIGHT = 0.3  # Default: 30%
+SKILL_WEIGHT = 0.3     # Default: 30%
 ```
 
 ---
 
-## 🚀 Deployment
+## 📊 Performance
 
-### Streamlit Cloud (Recommended)
+### ⚡ Benchmarks
 
-1. **Push to GitHub**:
-```bash
-git add .
-git commit -m "Ready for deployment"
-git push origin main
-```
+| Metric | Value | Description |
+|--------|-------|-------------|
+| **🚀 Resume Processing** | < 2 seconds | Complete parsing and extraction |
+| **🤖 LLM Explanation** | 3-5 seconds | AI-generated insights |
+| **⏱️ API Response** | < 7 seconds | End-to-end request processing |
+| **🎯 Match Accuracy** | 85-92% | Resume-job matching quality |
+| **👥 Concurrent Users** | 50+ | With proper infrastructure |
 
-2. **Deploy on Streamlit Cloud**:
-   - Go to [share.streamlit.io](https://share.streamlit.io)
-   - Connect your GitHub repository
-   - Set main file: `streamlit_app/app.py`
-   - Add secrets in dashboard (API keys)
+### 🚀 Performance Optimizations
 
-3. **Configure Secrets**:
-```toml
-# .streamlit/secrets.toml
-[api]
-OPENAI_API_KEY = "your-key"
-OLLAMA_BASE_URL = "http://your-ollama-server:11434"
+**Backend Optimizations:**
+- ✅ **Job data preloading** on startup (eliminates disk I/O per request)
+- ✅ **Async processing** with FastAPI (non-blocking I/O operations)
+- ✅ **Concurrent server startup** (3 services launch in 2 seconds)
+- ✅ **Efficient text processing** with regex and NLTK
+- ✅ **LLM response caching** for repeated queries
 
-[model]
-CONFIDENCE_THRESHOLD = 0.60
-```
-
-### Docker Deployment
-
-```dockerfile
-# Dockerfile
-FROM python:3.9-slim
-
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-RUN python -m spacy download en_core_web_sm
-
-COPY . .
-
-EXPOSE 8000 8501
-
-CMD ["sh", "-c", "uvicorn src.api:app --host 0.0.0.0 --port 8000 & streamlit run streamlit_app/app.py --server.port 8501"]
-```
-
-```bash
-# Build and run
-docker build -t hr-matching .
-docker run -p 8000:8000 -p 8501:8501 hr-matching
-```
-
----
-
-## 📊 Performance Metrics
-
-### ML Model Performance
-
-| Metric | Value |
-|--------|-------|
-| **Accuracy** | 96.3% |
-| **Precision (High)** | 85% |
-| **Recall (High)** | 83% |
-| **F1-Score (High)** | 84% |
-| **Training Samples** | 25,011 |
-| **Validation Samples** | 5,359 |
-| **Test Samples** | 5,360 |
-
-### System Performance
-
-| Operation | Average Time |
-|-----------|--------------|
-| **CV Parsing** | 0.3s |
-| **Feature Extraction** | 0.2s |
-| **ML Prediction** | 0.1s |
-| **LLM Explanation** | 1.2s |
-| **Total Pipeline** | < 2s |
-
----
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-#### 1. spaCy Model Not Found
-
-```bash
-# Solution
-python -m spacy download en_core_web_sm
-```
-
-#### 2. Port Already in Use
-
-```bash
-# Change ports
-uvicorn src.api:app --port 8001
-streamlit run streamlit_app/app.py --server.port 8502
-```
-
-#### 3. Ollama Connection Error
-
-```bash
-# Check Ollama status
-curl http://localhost:11434/api/tags
-
-# Start Ollama
-ollama serve
-
-# Pull model
-ollama pull llama3.2:3b
-```
-
-#### 4. Missing Environment Variables
-
-```bash
-# Verify .env file exists
-cat .env
-
-# Check variables are loaded
-python -c "from dotenv import load_dotenv; load_dotenv(); import os; print(os.getenv('OPENAI_API_KEY'))"
-```
+**Frontend Optimizations:**
+- ✅ **Code splitting** with Next.js (faster page loads)
+- ✅ **Server-side rendering** (improved SEO and performance)
+- ✅ **Image optimization** (automatic WebP conversion)
+- ✅ **Bundle size optimization** (tree-shaking unused code)
 
 ---
 
 ## 🤝 Contributing
 
-This is an academic project. For contributions:
+We welcome contributions! Here's how you can help:
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests
-5. Submit a pull request
+### Ways to Contribute
+
+- 🐛 **Report bugs** via GitHub Issues
+- 💡 **Suggest features** in Discussions
+- 📝 **Improve documentation**
+- 🧪 **Add tests**
+- 🔧 **Fix issues** with Pull Requests
+
+### Development Workflow
+
+```bash
+# 1. Fork the repository
+# 2. Clone your fork
+git clone https://github.com/YOUR_USERNAME/Recruiter-Pro-AI.git
+
+# 3. Create a feature branch
+git checkout -b feature/your-feature-name
+
+# 4. Make your changes
+# 5. Run tests
+pytest tests/ -v
+
+# 6. Format code
+black src/ tests/
+flake8 src/ tests/
+
+# 7. Commit and push
+git commit -m "Add: your feature description"
+git push origin feature/your-feature-name
+
+# 8. Open a Pull Request
+```
+
+### Code Standards
+
+- Follow **PEP 8** for Python code
+- Use **Black** for code formatting
+- Write **type hints** for all functions
+- Add **docstrings** for public APIs
+- Maintain **test coverage** above 80%
 
 ---
 
 ## 📄 License
 
-**Academic/Educational Use Only**
-
-This project is developed for academic research and educational purposes.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 
 ## 🙏 Acknowledgments
 
-- **Dataset**: AI Resume Screening Dataset (35,730+ records)
-- **NLP**: spaCy, NLTK
-- **ML**: scikit-learn
-- **LLM**: OpenAI, Ollama
-- **Frameworks**: FastAPI, Streamlit
-- **Job Data**: Wuzzuf Egypt Tech Jobs
+- **FastAPI** - Modern Python web framework
+- **Next.js** - React framework for production
+- **Ollama** - Local LLM runtime
+- **LangChain** - LLM orchestration framework
 
 ---
 
-## 📞 Support
+## 📞 Contact & Support
 
-For issues and questions:
-- **GitHub Issues**: [Create an issue](https://github.com/yourusername/HR-Project/issues)
-- **Documentation**: See `docs/` directory
-- **API Docs**: http://localhost:8000/docs (when running)
+- **GitHub Issues**: [Report bugs or request features](https://github.com/Sharawey74/Recruiter-Pro-AI/issues)
+- **GitHub Discussions**: [Ask questions and share ideas](https://github.com/Sharawey74/Recruiter-Pro-AI/discussions)
 
 ---
 
-**Status**: ✅ Production Ready  
-**Version**: 1.0.0  
-**Last Updated**: December 24, 2025  
-**Maintained By**: HR-Project Team
+## 🌟 Star History
+
+If you find this project useful, please consider giving it a ⭐ on GitHub!
+
+
+
+---
+
+<div align="center">
+
+
+[⬆ Back to Top](#-recruiter-pro-ai)
+
+</div>
