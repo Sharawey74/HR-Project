@@ -51,7 +51,7 @@ class RawParser:
         """
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
-        print(f"✅ Agent 1 (RawParser) initialized. Output dir: {self.output_dir}")
+        print(f"[OK] Agent 1 (RawParser) initialized. Output dir: {self.output_dir}")
     
     def extract_text_from_pdf(self, pdf_path: str) -> str:
         """
