@@ -1,0 +1,167 @@
+{
+  "Logistic Regression": {
+    "smote": {
+      "sampling_strategy": 0.7,
+      "k_neighbors": 5
+    },
+    "hyperparameters": {
+      "penalty": "l1",
+      "C": 10.0,
+      "l1_ratio": 0.3,
+      "solver": "saga",
+      "max_iter": 1000,
+      "class_weight": "balanced"
+    },
+    "top_features": [
+      {
+        "feature": "projects_count",
+        "coefficient": 15.014250782823876
+      },
+      {
+        "feature": "experience",
+        "coefficient": 13.069622175892631
+      },
+      {
+        "feature": "cert_Deep Learning Specialization",
+        "coefficient": 7.765339755819674
+      },
+      {
+        "feature": "cert_Google ML",
+        "coefficient": 7.649448569388014
+      },
+      {
+        "feature": "experience_squared",
+        "coefficient": 7.233028892156515
+      },
+      {
+        "feature": "cert_AWS Certified",
+        "coefficient": 6.867935888897152
+      },
+      {
+        "feature": "experience_log",
+        "coefficient": 6.555366550534403
+      },
+      {
+        "feature": "skill_count",
+        "coefficient": 3.925595287317763
+      },
+      {
+        "feature": "has_react",
+        "coefficient": 1.8567257113401652
+      },
+      {
+        "feature": "salary",
+        "coefficient": 1.7820849785001287
+      }
+    ],
+    "validation_metrics": {
+      "accuracy": 0.9933333333333333,
+      "precision": 1.0,
+      "recall": 0.9918032786885246,
+      "f1": 0.9958847736625515,
+      "roc_auc": 1.0,
+      "specificity": 1.0,
+      "false_negative_rate": 0.00819672131147541,
+      "false_positive_rate": 0.0,
+      "confusion_matrix": {
+        "true_positives": 121,
+        "true_negatives": 28,
+        "false_positives": 0,
+        "false_negatives": 1
+      }
+    },
+    "composite_score": 0.9953591715577144,
+    "meets_criteria": true,
+    "criteria_checks": {
+      "recall": true,
+      "f1": true,
+      "roc_auc": true,
+      "precision": true,
+      "accuracy": true
+    },
+    "optimal_threshold": 0.46980637710176676
+  },
+  "Random Forest": {
+    "smote": {
+      "sampling_strategy": 0.7,
+      "k_neighbors": 5
+    },
+    "hyperparameters": {
+      "n_estimators": 300,
+      "max_depth": 15,
+      "min_samples_split": 50,
+      "min_samples_leaf": 5,
+      "max_features": 0.3,
+      "class_weight": "balanced",
+      "bootstrap": true
+    },
+    "top_features": [
+      {
+        "feature": "experience",
+        "importance": 0.26056713369595874
+      },
+      {
+        "feature": "experience_log",
+        "importance": 0.23927246488966078
+      },
+      {
+        "feature": "experience_squared",
+        "importance": 0.23091889209791147
+      },
+      {
+        "feature": "projects_count",
+        "importance": 0.1991579178391134
+      },
+      {
+        "feature": "years_per_project",
+        "importance": 0.038029748853550406
+      },
+      {
+        "feature": "cert_Deep Learning Specialization",
+        "importance": 0.00464117070150874
+      },
+      {
+        "feature": "salary_log",
+        "importance": 0.004495760040315666
+      },
+      {
+        "feature": "salary",
+        "importance": 0.0044125313216941235
+      },
+      {
+        "feature": "skill_count",
+        "importance": 0.004269770885327598
+      },
+      {
+        "feature": "education_level",
+        "importance": 0.0025484516387386286
+      }
+    ],
+    "validation_metrics": {
+      "accuracy": 0.92,
+      "precision": 0.9435483870967742,
+      "recall": 0.9590163934426229,
+      "f1": 0.9512195121951219,
+      "roc_auc": 0.9762880562060889,
+      "specificity": 0.75,
+      "false_negative_rate": 0.040983606557377046,
+      "false_positive_rate": 0.25,
+      "confusion_matrix": {
+        "true_positives": 117,
+        "true_negatives": 21,
+        "false_positives": 7,
+        "false_negatives": 5
+      }
+    },
+    "composite_score": 0.9570238853767249,
+    "meets_criteria": true,
+    "criteria_checks": {
+      "recall": true,
+      "f1": true,
+      "roc_auc": true,
+      "precision": true,
+      "accuracy": true
+    },
+    "optimal_threshold": 0.6170399532776877
+  }
+}

@@ -1,0 +1,330 @@
+{
+  "Logistic Regression": {
+    "smote": {
+      "sampling_strategy": 0.7,
+      "k_neighbors": 5
+    },
+    "hyperparameters": {
+      "penalty": "l1",
+      "C": 10.0,
+      "l1_ratio": 0.3,
+      "solver": "saga",
+      "max_iter": 1000,
+      "class_weight": "balanced"
+    },
+    "top_features": [
+      {
+        "feature": "projects_count",
+        "coefficient": 15.014250782823876
+      },
+      {
+        "feature": "experience",
+        "coefficient": 13.069622175892631
+      },
+      {
+        "feature": "cert_Deep Learning Specialization",
+        "coefficient": 7.765339755819674
+      },
+      {
+        "feature": "cert_Google ML",
+        "coefficient": 7.649448569388014
+      },
+      {
+        "feature": "experience_squared",
+        "coefficient": 7.233028892156515
+      },
+      {
+        "feature": "cert_AWS Certified",
+        "coefficient": 6.867935888897152
+      },
+      {
+        "feature": "experience_log",
+        "coefficient": 6.555366550534403
+      },
+      {
+        "feature": "skill_count",
+        "coefficient": 3.925595287317763
+      },
+      {
+        "feature": "has_react",
+        "coefficient": 1.8567257113401652
+      },
+      {
+        "feature": "salary",
+        "coefficient": 1.7820849785001287
+      }
+    ],
+    "validation_metrics": {
+      "accuracy": 0.9933333333333333,
+      "precision": 1.0,
+      "recall": 0.9918032786885246,
+      "f1": 0.9958847736625515,
+      "roc_auc": 1.0,
+      "specificity": 1.0,
+      "false_negative_rate": 0.00819672131147541,
+      "false_positive_rate": 0.0,
+      "confusion_matrix": {
+        "true_positives": 121,
+        "true_negatives": 28,
+        "false_positives": 0,
+        "false_negatives": 1
+      }
+    },
+    "validation_composite_score": 0.9953591715577144,
+    "validation_meets_criteria": true,
+    "validation_criteria_checks": {
+      "recall": true,
+      "f1": true,
+      "roc_auc": true,
+      "precision": true,
+      "accuracy": true
+    },
+    "validation_optimal_threshold": 0.46980637710176676,
+    "test_metrics": {
+      "accuracy": 0.9933333333333333,
+      "precision": 1.0,
+      "recall": 0.9918032786885246,
+      "f1": 0.9958847736625515,
+      "roc_auc": 1.0,
+      "specificity": 1.0,
+      "false_negative_rate": 0.00819672131147541,
+      "false_positive_rate": 0.0,
+      "confusion_matrix": {
+        "true_positives": 121,
+        "true_negatives": 28,
+        "false_positives": 0,
+        "false_negatives": 1
+      }
+    },
+    "test_composite_score": 0.9953591715577144,
+    "test_meets_criteria": true,
+    "test_criteria_checks": {
+      "recall": true,
+      "f1": true,
+      "roc_auc": true,
+      "precision": true,
+      "accuracy": true
+    },
+    "test_optimal_threshold": 0.2595990244829803
+  },
+  "Random Forest": {
+    "smote": {
+      "sampling_strategy": 0.7,
+      "k_neighbors": 5
+    },
+    "hyperparameters": {
+      "n_estimators": 300,
+      "max_depth": 15,
+      "min_samples_split": 50,
+      "min_samples_leaf": 5,
+      "max_features": 0.3,
+      "class_weight": "balanced",
+      "bootstrap": true
+    },
+    "top_features": [
+      {
+        "feature": "experience",
+        "importance": 0.26056713369595874
+      },
+      {
+        "feature": "experience_log",
+        "importance": 0.23927246488966078
+      },
+      {
+        "feature": "experience_squared",
+        "importance": 0.23091889209791147
+      },
+      {
+        "feature": "projects_count",
+        "importance": 0.1991579178391134
+      },
+      {
+        "feature": "years_per_project",
+        "importance": 0.038029748853550406
+      },
+      {
+        "feature": "cert_Deep Learning Specialization",
+        "importance": 0.00464117070150874
+      },
+      {
+        "feature": "salary_log",
+        "importance": 0.004495760040315666
+      },
+      {
+        "feature": "salary",
+        "importance": 0.0044125313216941235
+      },
+      {
+        "feature": "skill_count",
+        "importance": 0.004269770885327598
+      },
+      {
+        "feature": "education_level",
+        "importance": 0.0025484516387386286
+      }
+    ],
+    "validation_metrics": {
+      "accuracy": 0.92,
+      "precision": 0.9435483870967742,
+      "recall": 0.9590163934426229,
+      "f1": 0.9512195121951219,
+      "roc_auc": 0.9762880562060889,
+      "specificity": 0.75,
+      "false_negative_rate": 0.040983606557377046,
+      "false_positive_rate": 0.25,
+      "confusion_matrix": {
+        "true_positives": 117,
+        "true_negatives": 21,
+        "false_positives": 7,
+        "false_negatives": 5
+      }
+    },
+    "validation_composite_score": 0.9570238853767249,
+    "validation_meets_criteria": true,
+    "validation_criteria_checks": {
+      "recall": true,
+      "f1": true,
+      "roc_auc": true,
+      "precision": true,
+      "accuracy": true
+    },
+    "validation_optimal_threshold": 0.6170399532776878,
+    "test_metrics": {
+      "accuracy": 0.92,
+      "precision": 0.9741379310344828,
+      "recall": 0.9262295081967213,
+      "f1": 0.9495798319327731,
+      "roc_auc": 0.9716042154566744,
+      "specificity": 0.8928571428571429,
+      "false_negative_rate": 0.07377049180327869,
+      "false_positive_rate": 0.10714285714285714,
+      "confusion_matrix": {
+        "true_positives": 113,
+        "true_negatives": 25,
+        "false_positives": 3,
+        "false_negatives": 9
+      }
+    },
+    "test_composite_score": 0.9456213974566652,
+    "test_meets_criteria": true,
+    "test_criteria_checks": {
+      "recall": true,
+      "f1": true,
+      "roc_auc": true,
+      "precision": true,
+      "accuracy": true
+    },
+    "test_optimal_threshold": 0.6145824942946746
+  },
+  "XGBoost": {
+    "smote": {
+      "sampling_strategy": 0.7,
+      "k_neighbors": 5
+    },
+    "hyperparameters": {
+      "n_estimators": 200,
+      "learning_rate": 0.1,
+      "max_depth": 5,
+      "min_child_weight": 5.0,
+      "gamma": 0.3,
+      "subsample": 0.8,
+      "colsample_bytree": 0.7,
+      "reg_alpha": 0.0,
+      "reg_lambda": 1.0
+    },
+    "top_features": [
+      {
+        "feature": "experience",
+        "importance": 0.40267401933670044
+      },
+      {
+        "feature": "experience_squared",
+        "importance": 0.15490835905075073
+      },
+      {
+        "feature": "projects_count",
+        "importance": 0.12330163270235062
+      },
+      {
+        "feature": "education_level",
+        "importance": 0.04045289009809494
+      },
+      {
+        "feature": "experience_log",
+        "importance": 0.0393068790435791
+      },
+      {
+        "feature": "cert_Deep Learning Specialization",
+        "importance": 0.032957617193460464
+      },
+      {
+        "feature": "years_per_project",
+        "importance": 0.02965487353503704
+      },
+      {
+        "feature": "cert_Google ML",
+        "importance": 0.027635740116238594
+      },
+      {
+        "feature": "skill_count",
+        "importance": 0.027115074917674065
+      },
+      {
+        "feature": "has_deep_learning",
+        "importance": 0.024719085544347763
+      }
+    ],
+    "validation_metrics": {
+      "accuracy": 0.96,
+      "precision": 0.967741935483871,
+      "recall": 0.9836065573770492,
+      "f1": 0.975609756097561,
+      "roc_auc": 0.9909250585480094,
+      "specificity": 0.8571428571428571,
+      "false_negative_rate": 0.01639344262295082,
+      "false_positive_rate": 0.14285714285714285,
+      "confusion_matrix": {
+        "true_positives": 120,
+        "true_negatives": 24,
+        "false_positives": 4,
+        "false_negatives": 2
+      }
+    },
+    "validation_composite_score": 0.980304267233199,
+    "validation_meets_criteria": true,
+    "validation_criteria_checks": {
+      "recall": true,
+      "f1": true,
+      "roc_auc": true,
+      "precision": true,
+      "accuracy": true
+    },
+    "validation_optimal_threshold": 0.8941317200660706,
+    "test_metrics": {
+      "accuracy": 0.9666666666666667,
+      "precision": 0.975609756097561,
+      "recall": 0.9836065573770492,
+      "f1": 0.9795918367346939,
+      "roc_auc": 0.9932669789227166,
+      "specificity": 0.8928571428571429,
+      "false_negative_rate": 0.01639344262295082,
+      "false_positive_rate": 0.10714285714285714,
+      "confusion_matrix": {
+        "true_positives": 120,
+        "true_negatives": 25,
+        "false_positives": 3,
+        "false_negatives": 2
+      }
+    },
+    "test_composite_score": 0.9828882868621259,
+    "test_meets_criteria": true,
+    "test_criteria_checks": {
+      "recall": true,
+      "f1": true,
+      "roc_auc": true,
+      "precision": true,
+      "accuracy": true
+    },
+    "test_optimal_threshold": 0.8791045546531677
+  }
+}
